@@ -10,10 +10,8 @@ import java.io.File;
 import java.io.IOException;
 
 public class Base64AndPic {
-    public static String imgToBase64String(String imgPath) {
-        System.out.println("fileLen = " + new File(imgPath).length());
-        Bitmap bitmap = BitmapFactory.decodeFile(imgPath);
-        Bitmap bitmap1 = ImageUtils.comp(bitmap);
+    public static String imgToBase64String(Bitmap bitmap) {
+        Bitmap bitmap1 = ImageUtils.compImg(bitmap);
         Log.e("2018324565", "转化成功");
         return bitmapToBase64(bitmap1);
     }

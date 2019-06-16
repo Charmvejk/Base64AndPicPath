@@ -8,7 +8,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 
 public class ImageUtils {
-    public static Bitmap comp(Bitmap image) {
+    public static Bitmap compImg(Bitmap image) {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         image.compress(Bitmap.CompressFormat.JPEG, 100, baos);
         Log.e("wechat", "质量压缩前baos.toByteArray().length" + baos.toByteArray().length / 1024 + "字节");
